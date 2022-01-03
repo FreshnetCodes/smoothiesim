@@ -396,9 +396,10 @@ end)
 end
 function autosellVF()
 spawn(function()
-while getgenv().autoSV == true do
+while getgenv().autoVS == true do
 game:GetService("ReplicatedStorage").Events.Gameplay.SellToVIPHotAirBalloon:FireServer()
 game:GetService("ReplicatedStorage").Events.Gameplay.AddCratesToVIPBalloon:FireServer()
+wait()
 end
 end)
 end
