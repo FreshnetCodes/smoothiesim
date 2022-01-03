@@ -1,4 +1,5 @@
 getgenv().autoS = false
+getgenv().autoVS = false
 getgenv().autoSTB = false
 getgenv().autoCFB = false
 local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
@@ -6,6 +7,7 @@ local w = library:CreateWindow("Smoothie Simulator")
 local b = w:CreateFolder("Auto Farm")
 local c = w:CreateFolder("Teleports")
 local d = w:CreateFolder("Misc")
+local e = w:CreateFolder("How to place trees over limit")
 local plr = game.Players.LocalPlayer
 local hum = plr.Character.HumanoidRootPart
 local plot1 = game.Workspace.Plots.Plot1
@@ -71,10 +73,16 @@ autoCFBF()
 end
 end)
 b:Toggle("Auto Sell",function(bool)
-    getgenv().autoS = bool
-    if bool then
-        autoSellF()
-    end
+getgenv().autoS = bool
+if bool then
+autoSellF()
+end
+end)
+b:Toggle("Auto Sell to VIP Balloon",function(bool)
+getgenv().autoS = bool
+if bool then
+autosellVF() 
+end
 end)
 c:Button("Smoothie Shop",function()
 hum.CFrame = CFrame.new(40.3425, 2.20934, -277.465)
@@ -86,11 +94,11 @@ c:Button("Vip Balloon",function()
 hum.CFrame = CFrame.new(-16.0274, 2.10962, -158.502)
 end)
 c:Button("Plot",function()
-    local plotPOS = localplot.Parts.EnterPart.Position
-    hum.CFrame = CFrame.new(plotPOS)
+local plotPOS = localplot.Parts.EnterPart.Position
+hum.CFrame = CFrame.new(plotPOS)
 end)
 c:Button("Destroy Water",function()
-    water:destroy()
+water:destroy()
 end)
 d:Button("Plot Owners",function()
 plot1 = game.Workspace.Plots.Plot1
@@ -123,6 +131,15 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/
 end)
 d:Button("Remote Spy",function()
 loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
+end)
+e:Button("Open Console",function()
+print("Execute Infinite Yeild")
+wait(0.5)
+print("Type 'backtrack 10'")
+wait(0.5)
+print("Then auto-click place tree")
+wait(0.5)
+print("You should have lots of trees in the same spot, you can type 'backtrack 0' to get normal ping")
 end)
 function autoCFBF()
 spawn(function()
@@ -369,11 +386,19 @@ end
 end)
 end
 function autoSellF()
-    spawn(function()
-        while getgenv().autoS == true do
-            game:GetService("ReplicatedStorage").Events.Gameplay.SellToHotAirBalloon:FireServer()
-            game:GetService("ReplicatedStorage").Events.Gameplay.MakeBalloonFly:FireServer()
-            wait(7)
-        end
-    end)
+spawn(function()
+while getgenv().autoS == true do
+game:GetService("ReplicatedStorage").Events.Gameplay.SellToHotAirBalloon:FireServer()
+game:GetService("ReplicatedStorage").Events.Gameplay.MakeBalloonFly:FireServer()
+wait(7)
+end
+end)
+end
+function autosellVF()
+spawn(function()
+while getgenv().autoSV == true do
+game:GetService("ReplicatedStorage").Events.Gameplay.SellToVIPHotAirBalloon:FireServer()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddCratesToVIPBalloon:FireServer()
+end
+end)
 end
