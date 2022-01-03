@@ -23,6 +23,7 @@ local plot7 = game.Workspace.Plots.Plot7
 local plotcheck7 = plot7.Info.Owner
 local plot8 = game.Workspace.Plots.Plot8
 local plotcheck8 = plot8.Info.Owner
+local water = game.Workspace.Map.Water:FindFirstChild("Game Water")
 local localplot
 if plotcheck1.Value == plr then
 print("Plot1 = true")
@@ -81,23 +82,26 @@ c:Button("Plot",function()
     local plotPOS = localplot.Parts.EnterPart.Position
     hum.CFrame = CFrame.new(plotPOS)
 end)
+c:Button("Destroy Water",function()
+    water:destroy()
+end)
 d:Button("Plot Owners",function()
-local plot1 = game.Workspace.Plots.Plot1
-local plotcheck1 = plot1.Info.Owner
-local plot2 = game.Workspace.Plots.Plot2
-local plotcheck2 = plot2.Info.Owner
-local plot3 = game.Workspace.Plots.Plot3
-local plotcheck3 = plot3.Info.Owner
-local plot4 = game.Workspace.Plots.Plot4
-local plotcheck4 = plot4.Info.Owner
-local plot5 = game.Workspace.Plots.Plot5
-local plotcheck5 = plot5.Info.Owner
-local plot6 = game.Workspace.Plots.Plot6
-local plotcheck6 = plot6.Info.Owner
-local plot7 = game.Workspace.Plots.Plot7
-local plotcheck7 = plot7.Info.Owner
-local plot8 = game.Workspace.Plots.Plot8
-local plotcheck8 = plot8.Info.Owner
+plot1 = game.Workspace.Plots.Plot1
+plotcheck1 = plot1.Info.Owner
+plot2 = game.Workspace.Plots.Plot2
+plotcheck2 = plot2.Info.Owner
+plot3 = game.Workspace.Plots.Plot3
+plotcheck3 = plot3.Info.Owner
+plot4 = game.Workspace.Plots.Plot4
+plotcheck4 = plot4.Info.Owner
+plot5 = game.Workspace.Plots.Plot5
+plotcheck5 = plot5.Info.Owner
+plot6 = game.Workspace.Plots.Plot6
+plotcheck6 = plot6.Info.Owner
+plot7 = game.Workspace.Plots.Plot7
+plotcheck7 = plot7.Info.Owner
+plot8 = game.Workspace.Plots.Plot8
+plotcheck8 = plot8.Info.Owner
 print(plotcheck1.Value)
 print(plotcheck2.Value)
 print(plotcheck3.Value)
