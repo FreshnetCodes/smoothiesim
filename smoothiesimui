@@ -1,3 +1,4 @@
+getgenv().autoS = false
 getgenv().autoSTB = false
 getgenv().autoCFB = false
 local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
@@ -68,6 +69,12 @@ getgenv().autoCFB = bool
 if bool then
 autoCFBF()
 end
+end)
+b:Toggle("Auto Sell",function(bool)
+    getgenv().autoS = bool
+    if bool then
+        autoSellF()
+    end
 end)
 c:Button("Smoothie Shop",function()
 hum.CFrame = CFrame.new(40.3425, 2.20934, -277.465)
@@ -360,4 +367,13 @@ game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServe
 wait()
 end
 end)
+end
+function autoSellF()
+    spawn(function()
+        while getgenv().autoS == true do
+            game:GetService("ReplicatedStorage").Events.Gameplay.SellToHotAirBalloon:FireServer()
+            game:GetService("ReplicatedStorage").Events.Gameplay.MakeBalloonFly:FireServer()
+            wait(7)
+        end
+    end)
 end
