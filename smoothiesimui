@@ -1,0 +1,359 @@
+getgenv().autoSTB = false
+getgenv().autoCFB = false
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+local w = library:CreateWindow("Smoothie Simulator")
+local b = w:CreateFolder("Auto Farm")
+local c = w:CreateFolder("Teleports")
+local d = w:CreateFolder("Misc")
+local plr = game.Players.LocalPlayer
+local hum = plr.Character.HumanoidRootPart
+local plot1 = game.Workspace.Plots.Plot1
+local plotcheck1 = plot1.Info.Owner
+local plot2 = game.Workspace.Plots.Plot2
+local plotcheck2 = plot2.Info.Owner
+local plot3 = game.Workspace.Plots.Plot3
+local plotcheck3 = plot3.Info.Owner
+local plot4 = game.Workspace.Plots.Plot4
+local plotcheck4 = plot4.Info.Owner
+local plot5 = game.Workspace.Plots.Plot5
+local plotcheck5 = plot5.Info.Owner
+local plot6 = game.Workspace.Plots.Plot6
+local plotcheck6 = plot6.Info.Owner
+local plot7 = game.Workspace.Plots.Plot7
+local plotcheck7 = plot7.Info.Owner
+local plot8 = game.Workspace.Plots.Plot8
+local plotcheck8 = plot8.Info.Owner
+local localplot
+if plotcheck1.Value == plr then
+print("Plot1 = true")
+localplot = plot1
+end
+if plotcheck2.Value == plr then
+print("Plot2 = true")
+localplot = plot2
+end
+if plotcheck3.Value == plr then
+print("Plot3 = true")
+localplot = plot3
+end
+if plotcheck4.Value == plr then
+print("Plot4 = true")
+localplot = plot4
+end
+if plotcheck5.Value == plr then
+print("Plot5 = true")
+localplot = plot5
+end
+if plotcheck6.Value == plr then
+print("Plot6 = true")
+localplot = plot6
+end
+if plotcheck7.Value == plr then
+print("Plot7 = true")
+localplot = plot7
+end
+if plotcheck8.Value == plr then
+print("Plot8 = true")
+localplot = plot8
+end
+b:Toggle("Send To Blender",function(bool)
+getgenv().autoSTB = bool
+if bool then
+autoSTBF()
+end
+end)
+b:Toggle("Collect From Blender",function(bool)
+getgenv().autoCFB = bool
+if bool then
+autoCFBF()
+end
+end)
+c:Button("Smoothie Shop",function()
+hum.CFrame = CFrame.new(40.3425, 2.20934, -277.465)
+end)
+c:Button("BackPack Shop",function()
+hum.CFrame = CFrame.new(29.2104, 2.20908, -222.429)
+end)
+c:Button("Vip Balloon",function()
+hum.CFrame = CFrame.new(-16.0274, 2.10962, -158.502)
+end)
+c:Button("Plot",function()
+    local plotPOS = localplot.Parts.EnterPart.Position
+    hum.CFrame = CFrame.new(plotPOS)
+end)
+d:Button("Plot Owners",function()
+local plot1 = game.Workspace.Plots.Plot1
+local plotcheck1 = plot1.Info.Owner
+local plot2 = game.Workspace.Plots.Plot2
+local plotcheck2 = plot2.Info.Owner
+local plot3 = game.Workspace.Plots.Plot3
+local plotcheck3 = plot3.Info.Owner
+local plot4 = game.Workspace.Plots.Plot4
+local plotcheck4 = plot4.Info.Owner
+local plot5 = game.Workspace.Plots.Plot5
+local plotcheck5 = plot5.Info.Owner
+local plot6 = game.Workspace.Plots.Plot6
+local plotcheck6 = plot6.Info.Owner
+local plot7 = game.Workspace.Plots.Plot7
+local plotcheck7 = plot7.Info.Owner
+local plot8 = game.Workspace.Plots.Plot8
+local plotcheck8 = plot8.Info.Owner
+print(plotcheck1.Value)
+print(plotcheck2.Value)
+print(plotcheck3.Value)
+print(plotcheck4.Value)
+print(plotcheck5.Value)
+print(plotcheck6.Value)
+print(plotcheck7.Value)
+print(plotcheck8.Value)
+end)
+d:Button("Infinite Yeild",function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+d:Button("Remote Spy",function()
+loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
+end)
+function autoCFBF()
+spawn(function()
+while getgenv().autoCFB == true do
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("57"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("56"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("55"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("54"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("53"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("52"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("51"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("50"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("49"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("48"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("47"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("46"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("45"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("44"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("43"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("42"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("41"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("40"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("39"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("38"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("37"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("37"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("36"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("35"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("34"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("33"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("32"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("31"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("30"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("29"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("28"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("27"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("26"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("25"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("24"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("23"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("22"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("21"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("20"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("19"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("18"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("17"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("16"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("15"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("14"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("13"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("12"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("11"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("10"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("9"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("8"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("7"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("6"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("5"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("4"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("3"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("2"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.CollectFromBlender:FireServer(localplot.Blenders:FindFirstChild("1"))
+wait()
+end
+end)
+end
+function autoSTBF()
+spawn(function()
+while getgenv().autoSTB == true do
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("58"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("57"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("56"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("55"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("54"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("53"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("52"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("51"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("49"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("48"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("47"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("47"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("46"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("45"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("44"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("43"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("42"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("41"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("40"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("39"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("38"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("37"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("36"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("35"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("34"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("33"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("32"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("31"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("30"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("29"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("28"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("27"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("26"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("25"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("24"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("23"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("22"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("21"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("20"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("19"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("18"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("17"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("16"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("15"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("14"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("13"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("12"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("11"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("10"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("9"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("8"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("7"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("6"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("5"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("4"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("3"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("2"))
+wait()
+game:GetService("ReplicatedStorage").Events.Gameplay.AddFruitToBlender:FireServer(localplot.Blenders:FindFirstChild("1"))
+wait()
+end
+end)
+end
